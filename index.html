@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pastas Caseras La Yaya | Sorrentinos, Pastas & Salsas Caseras</title>
+  <meta name="description" content="Pastas Caseras La Yaya - Emprendimiento familiar de Lucas y Dani. Sorrentinos gourmet, pastas tradicionales y salsas caseras. Envíos y pedidos para Villa de Soto y La Falda.">
+  <meta name="theme-color" content="#9a1b1e">
+
+  <!-- Favicon / Ícono del Navegador -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pastas Caseras La Yaya | De Nuestra Cocina a tu Mesa">
+  <meta property="og:description" content="Sorrentinos gourmet, ñoquis, tallarines y salsas caseras de Lucas y Dani. Pedí por WhatsApp para Villa de Soto y La Falda.">
+  <meta property="og:image" content="assets/logo.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6.5.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            yaya: {
+              cream: '#faf6ee',
+              creamDark: '#f4ecdc',
+              red: '#9a1b1e',
+              redDark: '#7f1416',
+              gold: '#d97706',
+              olive: '#3f6212',
+              charcoal: '#262626'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-grain text-stone-800 antialiased selection:bg-yaya-red selection:text-white">
+
+  <!-- ================= TOP NOTIFICATION BAR ================= -->
+  <div class="bg-stone-900 text-stone-200 text-xs py-2 px-4 border-b border-stone-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1 text-center sm:text-left">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+        <span>Tomando pedidos con anticipación para <strong>Villa de Soto</strong> y <strong>La Falda</strong></span>
+      </div>
+      <div class="flex items-center gap-4 text-stone-300">
+        <a href="https://instagram.com/pastascaseraslayaya" target="_blank" rel="noopener" class="hover:text-amber-400 transition flex items-center gap-1.5">
+          <i class="fa-brands fa-instagram text-sm"></i> @pastascaseraslayaya
+        </a>
+        <span class="text-stone-600">|</span>
+        <a href="https://wa.me/5493549443269" target="_blank" rel="noopener" class="hover:text-emerald-400 transition flex items-center gap-1.5 font-medium">
+          <i class="fa-brands fa-whatsapp text-sm"></i> Lucas: 3549-443269
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= STICKY HEADER ================= -->
+  <header id="main-header" class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-stone-200/80 transition duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo & Marca -->
+        <a href="#" class="flex items-center gap-3.5 group">
+          <div class="relative w-14 h-14 rounded-full overflow-hidden border-2 border-amber-500 shadow-md group-hover:scale-105 transition duration-300 bg-amber-50 shrink-0">
+            <img src="assets/logo.jpg" alt="Logo La Yaya" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <span class="block font-serif text-xl sm:text-2xl font-bold tracking-tight text-yaya-red leading-none">
+              La Yaya
+            </span>
+            <span class="block text-[11px] font-bold tracking-widest uppercase text-stone-500 mt-1">
+              Pastas Caseras
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-stone-700">
+          <a href="#variedades" class="hover:text-yaya-red transition">Nuestras Variedades</a>
+          <a href="#salsas-info" class="hover:text-yaya-red transition">Salsas Caseras</a>
+          <a href="#historia" class="hover:text-yaya-red transition">Lucas y Dani</a>
+          <a href="#como-cocinar" class="hover:text-yaya-red transition">Cómo Cocinar</a>
+          <a href="#zonas" class="hover:text-yaya-red transition">Zonas de Entrega</a>
+        </nav>
+
+        <!-- CTA Pedido Header -->
+        <div class="flex items-center gap-3">
+          <a href="#pedido-seccion" class="relative inline-flex items-center gap-2.5 px-4 sm:px-5 py-2.5 rounded-full bg-yaya-red hover:bg-yaya-redDark text-white text-xs sm:text-sm font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition transform active:scale-95">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="hidden sm:inline">Armar Pedido</span>
+            <span class="cart-badge hidden ml-1 px-1.5 py-0.5 bg-amber-400 text-stone-900 rounded-full text-xs font-black">0</span>
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button type="button" id="mobile-menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center rounded-xl bg-stone-100 text-stone-700 hover:text-yaya-red hover:bg-stone-200 transition">
+            <i id="menu-icon" class="fa-solid fa-bars text-lg"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-stone-200 bg-white px-4 pt-3 pb-6 space-y-2 shadow-xl">
+      <a href="#variedades" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-semibold text-stone-700 hover:bg-amber-50 hover:text-yaya-red">Nuestras Variedades</a>
+      <a href="#salsas-info" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-semibold text-stone-700 hover:bg-amber-50 hover:text-yaya-red">Salsas Caseras</a>
+      <a href="#historia" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-semibold text-stone-700 hover:bg-amber-50 hover:text-yaya-red">Lucas y Dani (Historia)</a>
+      <a href="#como-cocinar" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-semibold text-stone-700 hover:bg-amber-50 hover:text-yaya-red">Cómo Cocinar (Instrucciones)</a>
+      <a href="#zonas" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-semibold text-stone-700 hover:bg-amber-50 hover:text-yaya-red">Zonas de Entrega</a>
+      <div class="pt-3 border-t border-stone-100 flex flex-col gap-2 text-sm text-stone-600">
+        <a href="https://wa.me/5493549443269" target="_blank" rel="noopener" class="flex items-center gap-2 text-emerald-700 font-bold p-2 bg-emerald-50 rounded-lg">
+          <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Lucas: 3549-443269
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="relative overflow-hidden bg-warm-hero pt-12 pb-20 border-b border-stone-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Content -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs sm:text-sm font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-heart text-yaya-red"></i>
+            <span>Recetas Familiares · Hecho con Amor</span>
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-black text-stone-900 leading-[1.12]">
+            El Auténtico Sabor de las <span class="text-yaya-red underline decoration-amber-400 decoration-wavy decoration-2">Pastas Caseras</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-stone-700 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            Somos <strong>Lucas y Dani</strong>. Elaboramos cada sorrentino, tallarín, raviol o ñoqui con ingredientes nobles, dedicación y el cariño de la cocina familiar de siempre.
+          </p>
+
+          <!-- Badges de entrega -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-stone-200 text-xs sm:text-sm font-semibold text-stone-800 shadow-sm">
+              <i class="fa-solid fa-location-dot text-yaya-red"></i> Villa de Soto
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-stone-200 text-xs sm:text-sm font-semibold text-stone-800 shadow-sm">
+              <i class="fa-solid fa-location-dot text-amber-600"></i> La Falda
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-50 border border-emerald-200 text-xs sm:text-sm font-bold text-emerald-800 shadow-sm">
+              <i class="fa-solid fa-snowflake text-emerald-600"></i> Congeladas al Vacío
+            </span>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+            <a href="#pedido-seccion" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-yaya-red hover:bg-yaya-redDark text-white font-bold text-base uppercase tracking-wider shadow-lg hover:shadow-xl transition transform active:scale-95">
+              <i class="fa-solid fa-utensils"></i>
+              <span>Hacer mi Pedido</span>
+            </a>
+            <a href="#variedades" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-white hover:bg-stone-50 text-stone-800 border-2 border-stone-300 font-bold text-base transition shadow-sm">
+              <i class="fa-solid fa-list-check text-amber-700"></i>
+              <span>Ver Variedades</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right Hero Visual -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative max-w-sm sm:max-w-md w-full">
+            
+            <!-- Decoraciones de fondo -->
+            <div class="absolute -top-6 -left-6 w-32 h-32 bg-amber-200/60 rounded-full blur-2xl"></div>
+            <div class="absolute -bottom-6 -right-6 w-40 h-40 bg-red-200/50 rounded-full blur-2xl"></div>
+
+            <!-- Card Principal con el Logo Original de La Yaya -->
+            <div class="relative bg-white p-6 sm:p-8 rounded-3xl border border-stone-200 shadow-2xl text-center animate-float">
+              
+              <div class="w-48 h-48 sm:w-56 sm:h-56 mx-auto rounded-full overflow-hidden border-4 border-amber-500/80 shadow-inner bg-amber-50 mb-5">
+                <img src="assets/logo.jpg" alt="Pastas Caseras La Yaya" class="w-full h-full object-cover">
+              </div>
+
+              <h2 class="font-serif text-2xl font-bold text-stone-900">
+                Pastas Caseras La Yaya
+              </h2>
+              <p class="text-sm text-stone-600 italic mt-1 font-serif">
+                "De nuestra cocina a tu mesa con amor"
+              </p>
+
+              <div class="mt-4 pt-4 border-t border-stone-100 flex items-center justify-around text-center text-xs text-stone-600 font-semibold">
+                <div>
+                  <span class="block text-lg font-bold text-yaya-red">7+</span>
+                  <span>Rellenos Gourmet</span>
+                </div>
+                <div class="w-px h-8 bg-stone-200"></div>
+                <div>
+                  <span class="block text-lg font-bold text-amber-600">100%</span>
+                  <span>Artesanal</span>
+                </div>
+                <div class="w-px h-8 bg-stone-200"></div>
+                <div>
+                  <span class="block text-lg font-bold text-emerald-600">5-6 min</span>
+                  <span>Cocción Fácil</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PILLARS VALUE PROPS ================= -->
+  <section class="py-8 bg-white border-b border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        
+        <div class="flex items-center gap-3.5 p-3">
+          <div class="w-12 h-12 rounded-xl bg-red-100 text-yaya-red flex items-center justify-center text-xl shrink-0">
+            <i class="fa-solid fa-wheat-awn"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-stone-900 text-sm">Masa al Huevo</h4>
+            <p class="text-xs text-stone-500">Fresca y elástica, textura al dente.</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3.5 p-3">
+          <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-xl shrink-0">
+            <i class="fa-solid fa-drumstick-bite"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-stone-900 text-sm">Rellenos Abundantes</h4>
+            <p class="text-xs text-stone-500">Carnes braseadas y quesos nobles.</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3.5 p-3">
+          <div class="w-12 h-12 rounded-xl bg-orange-100 text-orange-800 flex items-center justify-center text-xl shrink-0">
+            <i class="fa-solid fa-kitchen-set"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-stone-900 text-sm">Salsas Caseras</h4>
+            <p class="text-xs text-stone-500">Boloñesa y pollo a fuego lento.</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3.5 p-3">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-xl shrink-0">
+            <i class="fa-solid fa-truck-fast"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-stone-900 text-sm">Villa de Soto & La Falda</h4>
+            <p class="text-xs text-stone-500">Pedidos programados por WhatsApp.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NUESTRA HISTORIA (LUCAS Y DANI) ================= -->
+  <section id="historia" class="py-16 sm:py-24 bg-stone-50 border-b border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Flyer / Photo Lucas y Dani -->
+        <div class="lg:col-span-5 order-2 lg:order-1">
+          <div class="relative card-artisan p-4 bg-white shadow-xl rotate-[-1deg] hover:rotate-0 transition duration-300">
+            <div class="aspect-[3/4] rounded-xl overflow-hidden border border-stone-200 bg-stone-100">
+              <img src="assets/historia-lucas-dani.jpg" alt="Mensaje de Lucas y Dani - Pastas Caseras La Yaya" class="w-full h-full object-cover">
+            </div>
+            <div class="p-3 text-center">
+              <span class="font-serif italic text-sm text-stone-600">
+                El mensaje que acompaña cada una de nuestras cajas ❤️
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text Story -->
+        <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-yaya-red">
+            <i class="fa-solid fa-heart"></i>
+            <span>Nuestras Raíces y Pasión</span>
+          </div>
+
+          <h2 class="font-serif text-3xl sm:text-4xl font-black text-stone-900 leading-tight">
+            Somos Lucas y Dani: Pastas Hechas con Amor de Familia
+          </h2>
+
+          <div class="space-y-4 text-stone-700 text-base sm:text-lg leading-relaxed">
+            <p class="bg-amber-50/80 p-5 rounded-2xl border-l-4 border-amber-600 italic font-serif text-stone-800">
+              "Somos Lucas y Dani, y hacemos pastas caseras con recetas familiares. Cada sorrentino, tallarín, raviol o ñoqui está hecho con dedicación, ingredientes simples y mucho amor por la cocina. Queremos llevar a tu mesa el sabor de las pastas caseras de siempre."
+            </p>
+            <p>
+              Nuestro emprendimiento nació del deseo de compartir en cada hogar esa comida que reúne a la familia los domingos: la que no se hace a las apuradas, sino con paciencia, picando las verduras a mano, dorando las carnes hasta que desprenden su aroma inconfundible y amasando la pasta fresca al huevo.
+            </p>
+            <p>
+              Nuestra principal apuesta son los <strong>sorrentinos de autor</strong>, donde combinamos clásicos indiscutidos con creaciones audaces como el relleno estilo <em>Dubai con pistacho</em>, el <em>Osobuco al Malbec</em> o la <em>Bondiola a la cerveza negra</em>.
+            </p>
+          </div>
+
+          <!-- Mini Checklist -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+            <div class="flex items-center gap-2.5 text-sm font-semibold text-stone-800">
+              <i class="fa-solid fa-circle-check text-emerald-600"></i> Sin conservantes ni aditivos
+            </div>
+            <div class="flex items-center gap-2.5 text-sm font-semibold text-stone-800">
+              <i class="fa-solid fa-circle-check text-emerald-600"></i> Rellenos 100% caseros
+            </div>
+            <div class="flex items-center gap-2.5 text-sm font-semibold text-stone-800">
+              <i class="fa-solid fa-circle-check text-emerald-600"></i> Listos para cocinar congelados
+            </div>
+            <div class="flex items-center gap-2.5 text-sm font-semibold text-stone-800">
+              <i class="fa-solid fa-circle-check text-emerald-600"></i> Atención directa por WhatsApp
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CATÁLOGO DE VARIEDADES ================= -->
+  <section id="variedades" class="py-16 sm:py-24 bg-white border-b border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-red-100 text-yaya-red text-xs font-bold uppercase tracking-wider">
+          <i class="fa-solid fa-utensils"></i> Carta y Variedades
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl font-black text-stone-900">
+          ¿Cuál vas a probar hoy?
+        </h2>
+        <p class="text-stone-600 text-base sm:text-lg">
+          Nuestra principal apuesta son los <strong>sorrentinos</strong>, pero también tenemos <strong>ñoquis</strong>, <strong>tallarines</strong>, <strong>ravioles</strong> y <strong>salsas caseras</strong>. Agregá las variedades que quieras a tu pedido.
+        </p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10">
+        <button type="button" data-category="all" class="tab-btn active px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold border border-stone-300 bg-white text-stone-700 transition">
+          Todos los Productos
+        </button>
+        <button type="button" data-category="sorrentinos" class="tab-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold border border-stone-300 bg-white text-stone-700 transition">
+          🌟 Sorrentinos Especiales
+        </button>
+        <button type="button" data-category="pastas" class="tab-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold border border-stone-300 bg-white text-stone-700 transition">
+          🍝 Pastas Tradicionales
+        </button>
+        <button type="button" data-category="salsas" class="tab-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold border border-stone-300 bg-white text-stone-700 transition">
+          🍅 Salsas Caseras
+        </button>
+      </div>
+
+      <!-- Grid de Productos (Renderizado dinámico con JS) -->
+      <div id="catalog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <!-- Rellenado por app.js -->
+      </div>
+
+      <!-- Banner de Aviso Stock -->
+      <div class="mt-12 p-6 rounded-2xl bg-amber-50 border border-amber-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3 text-amber-900">
+          <i class="fa-solid fa-circle-info text-2xl text-amber-600"></i>
+          <div>
+            <h4 class="font-bold text-sm sm:text-base">Consultá stock y sabores disponibles de la semana</h4>
+            <p class="text-xs sm:text-sm text-amber-800">Al armar tu pedido y enviárselo a Lucas por WhatsApp, te confirma disponibilidad inmediata de los rellenos.</p>
+          </div>
+        </div>
+        <a href="#pedido-seccion" class="px-5 py-2.5 rounded-xl bg-amber-700 hover:bg-amber-800 text-white font-bold text-xs uppercase tracking-wider shrink-0 transition">
+          Ir al Armador de Pedido
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SALSAS CASERAS DESTACADAS ================= -->
+  <section id="salsas-info" class="py-16 sm:py-20 bg-warm-hero border-b border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-100 text-yaya-red text-xs font-bold uppercase tracking-wider mb-2">
+          <i class="fa-solid fa-fire-burner"></i> El Acompañamiento Ideal
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-black text-stone-900">
+          Salsas Caseras Hechas con Paciencia
+        </h2>
+        <p class="text-stone-600 text-sm sm:text-base mt-2">
+          Nada mejor que acompañar una buena pasta casera con nuestras dos variedades estrella:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        
+        <!-- Salsa de Pollo -->
+        <div class="card-artisan p-6 sm:p-8 bg-white border border-stone-200 relative overflow-hidden">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 rounded-xl bg-orange-100 text-orange-700 flex items-center justify-center text-xl font-bold">
+              🍗
+            </div>
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-orange-700">Especialidad La Yaya</span>
+              <h3 class="font-serif text-2xl font-bold text-stone-900">Salsa Casera de Pollo</h3>
+            </div>
+          </div>
+          <p class="text-stone-600 text-sm leading-relaxed mb-6">
+            Preparada con presas de pollo seleccionadas y desmenuzadas, salteadas lentamente con cebollas, morrón dulce, tomates frescos y finas hierbas. Una salsa con textura, cuerpo y sabor a hogar.
+          </p>
+          <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+            <span class="text-xs font-semibold text-stone-500 bg-stone-100 px-2.5 py-1 rounded-md">Presentación: Pote individual / porción</span>
+            <button type="button" onclick="addToCart('salsa-pollo', 1)" class="px-4 py-2 bg-yaya-red hover:bg-yaya-redDark text-white text-xs font-bold rounded-xl transition flex items-center gap-1.5">
+              <i class="fa-solid fa-plus text-xs"></i> Sumar al Pedido
+            </button>
+          </div>
+        </div>
+
+        <!-- Salsa Boloñesa -->
+        <div class="card-artisan p-6 sm:p-8 bg-white border border-stone-200 relative overflow-hidden">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 rounded-xl bg-red-100 text-red-700 flex items-center justify-center text-xl font-bold">
+              🍅
+            </div>
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-red-700">Clásica Tradición</span>
+              <h3 class="font-serif text-2xl font-bold text-stone-900">Salsa Boloñesa Tradicional</h3>
+            </div>
+          </div>
+          <p class="text-stone-600 text-sm leading-relaxed mb-6">
+            Carne picada de primera calidad, dorada y cocinada a fuego manso con salsa de tomates maduros, laurel, orégano y un toque especial de la casa. El maridaje perfecto para cualquier sorrentino o pasta fresca.
+          </p>
+          <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+            <span class="text-xs font-semibold text-stone-500 bg-stone-100 px-2.5 py-1 rounded-md">Presentación: Pote individual / porción</span>
+            <button type="button" onclick="addToCart('salsa-bolonesa', 1)" class="px-4 py-2 bg-yaya-red hover:bg-yaya-redDark text-white text-xs font-bold rounded-xl transition flex items-center gap-1.5">
+              <i class="fa-solid fa-plus text-xs"></i> Sumar al Pedido
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CÓMO COCINAR: DE NUESTRA COCINA A TU MESA ================= -->
+  <section id="como-cocinar" class="py-16 sm:py-24 bg-stone-900 text-stone-100 relative overflow-hidden">
+    
+    <!-- Background glow -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-red-900/20 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="inline-block px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold uppercase tracking-wider border border-amber-500/30">
+          <i class="fa-solid fa-fire text-amber-400"></i> Modo de Preparación Oficial
+        </span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-black text-white">
+          De Nuestra Cocina a tu Mesa
+        </h2>
+        <p class="text-stone-400 text-base">
+          Seguí estos 4 pasos simples tal como vienen en nuestro instructivo para que tus sorrentinos queden en el punto justo:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        
+        <!-- Paso 1 -->
+        <div class="bg-stone-800/80 border border-stone-700/80 p-6 rounded-2xl relative hover:border-amber-500/50 transition">
+          <span class="absolute top-4 right-4 text-3xl font-black text-stone-700 font-serif">01</span>
+          <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-faucet-drip"></i>
+          </div>
+          <h3 class="font-serif text-lg font-bold text-white mb-2">Abundante Agua y Sal</h3>
+          <p class="text-stone-400 text-sm leading-relaxed">
+            Herví abundante agua con sal en una olla amplia para que los sorrentinos tengan espacio y no se choquen.
+          </p>
+        </div>
+
+        <!-- Paso 2 -->
+        <div class="bg-stone-800/80 border border-stone-700/80 p-6 rounded-2xl relative hover:border-amber-500/50 transition">
+          <span class="absolute top-4 right-4 text-3xl font-black text-stone-700 font-serif">02</span>
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-snowflake"></i>
+          </div>
+          <h3 class="font-serif text-lg font-bold text-white mb-2">Directo del Congelador</h3>
+          <p class="text-stone-400 text-sm leading-relaxed">
+            Agregá los sorrentinos congelados al agua hirviendo, de a poco y <strong>sin descongelar</strong> previamente.
+          </p>
+        </div>
+
+        <!-- Paso 3 -->
+        <div class="bg-stone-800/80 border border-stone-700/80 p-6 rounded-2xl relative hover:border-amber-500/50 transition">
+          <span class="absolute top-4 right-4 text-3xl font-black text-stone-700 font-serif">03</span>
+          <div class="w-12 h-12 rounded-xl bg-red-500/20 text-red-400 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-stopwatch"></i>
+          </div>
+          <h3 class="font-serif text-lg font-bold text-white mb-2">5 a 6 Minutos Suave</h3>
+          <p class="text-stone-400 text-sm leading-relaxed">
+            Cociná durante <strong>5 a 6 minutos</strong> con hervor suave. Remové lentamente con cuchara de madera.
+          </p>
+        </div>
+
+        <!-- Paso 4 -->
+        <div class="bg-stone-800/80 border border-stone-700/80 p-6 rounded-2xl relative hover:border-amber-500/50 transition">
+          <span class="absolute top-4 right-4 text-3xl font-black text-stone-700 font-serif">04</span>
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-bowl-food"></i>
+          </div>
+          <h3 class="font-serif text-lg font-bold text-white mb-2">Retirar con Espumadera</h3>
+          <p class="text-stone-400 text-sm leading-relaxed">
+            Retirá con espumadera con cuidado (no volcarlos en colador) y serví de inmediato con tu salsa caliente.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Tarjeta flyer instructivo original de La Yaya -->
+      <div class="bg-stone-800 border border-stone-700 rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row items-center gap-8">
+        <div class="w-full md:w-1/3 max-w-xs shrink-0 rounded-2xl overflow-hidden shadow-2xl border border-stone-600">
+          <img src="assets/flyer-instrucciones.jpg" alt="Instructivo De nuestra cocina a tu mesa - La Yaya" class="w-full h-auto object-cover">
+        </div>
+        <div class="space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-900/50 text-red-300 text-xs font-bold uppercase tracking-wider border border-red-700/50">
+            <i class="fa-solid fa-lightbulb"></i> Secretos de la Abuela
+          </div>
+          <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white">
+            El secreto está en el hervor suave
+          </h3>
+          <p class="text-stone-300 text-sm sm:text-base leading-relaxed">
+            Cuando agregues los sorrentinos, el agua baja de temperatura. Apenas vuelva a hervir, bajá la hornalla a fuego medio para que el agua burbujee suavemente sin romper la masa tierna ni perder el generoso relleno. Servilos bien calientes con queso rallado fresco.
+          </p>
+          <div class="pt-2">
+            <a href="#pedido-seccion" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-600 text-stone-900 font-bold text-sm uppercase tracking-wider transition">
+              <i class="fa-solid fa-cart-shopping"></i> Armar mi Pedido Ahora
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SECCIÓN DE PEDIDO INTERACTIVO ================= -->
+  <section id="pedido-seccion" class="py-16 sm:py-24 bg-stone-100 border-b border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-900 text-xs font-bold uppercase tracking-wider border border-emerald-300">
+          <i class="fa-brands fa-whatsapp text-emerald-600"></i> Pedidos Directos a Lucas
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl font-black text-stone-900">
+          Armá tu Pedido Personalizado
+        </h2>
+        <p class="text-stone-600 text-base sm:text-lg">
+          Completá tus datos, elegí tu localidad (<strong>Villa de Soto</strong> o <strong>La Falda</strong>) y las variedades que quieras. Al presionar el botón, se generará el mensaje listo para enviar a Lucas por WhatsApp.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Formulario de Datos del Cliente (7 cols) -->
+        <div class="lg:col-span-7 bg-white p-6 sm:p-8 rounded-3xl border border-stone-200 shadow-xl space-y-6">
+          
+          <div class="border-b border-stone-100 pb-4">
+            <h3 class="font-serif text-xl sm:text-2xl font-bold text-stone-900 flex items-center gap-2">
+              <span class="w-8 h-8 rounded-full bg-yaya-red text-white flex items-center justify-center text-sm font-sans font-bold">1</span>
+              Tus Datos de Entrega
+            </h3>
+            <p class="text-xs text-stone-500 mt-1">Indicanos tu nombre y localidad para coordinar la entrega con anticipación.</p>
+          </div>
+
+          <!-- Selector de Localidad (Villa de Soto / La Falda) -->
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">
+              Seleccioná tu Localidad <span class="text-red-600">*</span>
+            </label>
+            <div class="grid grid-cols-2 gap-3 sm:gap-4">
+              <button type="button" id="loc-soto" class="location-btn selected p-3.5 sm:p-4 rounded-2xl border-2 border-stone-200 text-left transition flex flex-col justify-between">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="font-bold text-base">Villa de Soto</span>
+                  <i class="fa-solid fa-location-dot text-yaya-red"></i>
+                </div>
+                <span class="text-xs text-stone-500">Repartos y puntos de retiro</span>
+              </button>
+
+              <button type="button" id="loc-falda" class="location-btn p-3.5 sm:p-4 rounded-2xl border-2 border-stone-200 text-left transition flex flex-col justify-between">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="font-bold text-base">La Falda</span>
+                  <i class="fa-solid fa-location-dot text-amber-600"></i>
+                </div>
+                <span class="text-xs text-stone-500">Valle de Punilla</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Campos de texto -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="client-name" class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1.5">
+                Nombre y Apellido <span class="text-red-600">*</span>
+              </label>
+              <input type="text" id="client-name" placeholder="Ej: María Gómez" class="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-300 text-stone-900 text-sm focus:outline-none focus:ring-2 focus:ring-yaya-red focus:bg-white transition" required />
+            </div>
+
+            <div>
+              <label for="client-phone" class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1.5">
+                Teléfono de Contacto
+              </label>
+              <input type="tel" id="client-phone" placeholder="Ej: 3549 123456" class="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-300 text-stone-900 text-sm focus:outline-none focus:ring-2 focus:ring-yaya-red focus:bg-white transition" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="client-delivery-type" class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1.5">
+                Modalidad
+              </label>
+              <select id="client-delivery-type" class="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-300 text-stone-900 text-sm focus:outline-none focus:ring-2 focus:ring-yaya-red focus:bg-white transition">
+                <option value="Envío a Domicilio">Envío a Domicilio</option>
+                <option value="Retiro por Punto de Entrega">Retiro por Punto de Entrega</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="client-date" class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1.5">
+                Fecha o Día Preferido
+              </label>
+              <input type="text" id="client-date" placeholder="Ej: Para el sábado al mediodía" class="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-300 text-stone-900 text-sm focus:outline-none focus:ring-2 focus:ring-yaya-red focus:bg-white transition" />
+            </div>
+          </div>
+
+          <div>
+            <label for="client-address" class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1.5">
+              Dirección de Entrega / Barrio
+            </label>
+            <input type="text" id="client-address" placeholder="Ej: San Martín 450, Centro" class="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-300 text-stone-900 text-sm focus:outline-none focus:ring-2 focus:ring-yaya-red focus:bg-white transition" />
+          </div>
+
+          <div>
+            <label for="client-notes" class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1.5">
+              Aclaraciones u Observaciones (Opcional)
+            </label>
+            <textarea id="client-notes" rows="2" placeholder="Ej: ¿Tienen queso rallado? / Avisar antes de salir" class="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-300 text-stone-900 text-sm focus:outline-none focus:ring-2 focus:ring-yaya-red focus:bg-white transition"></textarea>
+          </div>
+
+          <!-- Selector rápido de variedad adicional -->
+          <div class="pt-4 border-t border-stone-100">
+            <span class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">
+              ¿Querés sumar algo más rápido desde aquí?
+            </span>
+            <div class="flex flex-wrap gap-2">
+              <button type="button" onclick="addToCart('sorr-dubai', 1)" class="px-3 py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 rounded-lg text-xs font-bold transition flex items-center gap-1">
+                <i class="fa-solid fa-plus text-[10px]"></i> Sorrentinos Dubai
+              </button>
+              <button type="button" onclick="addToCart('sorr-jamon-muzza', 1)" class="px-3 py-1.5 bg-red-50 hover:bg-red-100 text-red-900 border border-red-300 rounded-lg text-xs font-bold transition flex items-center gap-1">
+                <i class="fa-solid fa-plus text-[10px]"></i> Jamón y Muzza
+              </button>
+              <button type="button" onclick="addToCart('sorr-cabutia-roquefort-nuez', 1)" class="px-3 py-1.5 bg-orange-50 hover:bg-orange-100 text-orange-900 border border-orange-300 rounded-lg text-xs font-bold transition flex items-center gap-1">
+                <i class="fa-solid fa-plus text-[10px]"></i> Zapallo Cabutiá
+              </button>
+              <button type="button" onclick="addToCart('salsa-bolonesa', 1)" class="px-3 py-1.5 bg-stone-100 hover:bg-stone-200 text-stone-800 border border-stone-300 rounded-lg text-xs font-bold transition flex items-center gap-1">
+                <i class="fa-solid fa-plus text-[10px]"></i> Salsa Boloñesa
+              </button>
+              <button type="button" onclick="addToCart('salsa-pollo', 1)" class="px-3 py-1.5 bg-stone-100 hover:bg-stone-200 text-stone-800 border border-stone-300 rounded-lg text-xs font-bold transition flex items-center gap-1">
+                <i class="fa-solid fa-plus text-[10px]"></i> Salsa de Pollo
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Canasta y Resumen de Pedido (5 cols) -->
+        <div class="lg:col-span-5 bg-white p-6 sm:p-8 rounded-3xl border border-stone-200 shadow-xl space-y-6">
+          
+          <div class="flex items-center justify-between border-b border-stone-100 pb-4">
+            <div>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-stone-900 flex items-center gap-2">
+                <span class="w-8 h-8 rounded-full bg-amber-600 text-white flex items-center justify-center text-sm font-sans font-bold">2</span>
+                Tu Canasta
+              </h3>
+              <p class="text-xs text-stone-500 mt-0.5">Detalle de cajas y salsas elegidas</p>
+            </div>
+            <button type="button" id="btn-clear-cart" class="text-xs font-bold text-stone-400 hover:text-red-600 transition flex items-center gap-1">
+              <i class="fa-regular fa-trash-can"></i> Vaciar
+            </button>
+          </div>
+
+          <!-- Empty State -->
+          <div id="cart-empty-state" class="text-center py-8 space-y-3">
+            <div class="w-16 h-16 rounded-full bg-amber-50 text-amber-600 mx-auto flex items-center justify-center text-2xl">
+              <i class="fa-solid fa-basket-shopping"></i>
+            </div>
+            <h4 class="font-serif font-bold text-stone-800 text-lg">Tu canasta está vacía</h4>
+            <p class="text-xs text-stone-500 max-w-xs mx-auto">
+              Elegí arriba tus variedades favoritas de sorrentinos, pastas o salsas y tocan en <strong>Agregar</strong>.
+            </p>
+            <a href="#variedades" class="inline-block mt-2 px-4 py-2 bg-amber-100 hover:bg-amber-200 text-amber-900 text-xs font-bold rounded-xl transition">
+              Explorar Variedades
+            </a>
+          </div>
+
+          <!-- Lista de ítems del Carrito -->
+          <div id="cart-items-container" class="space-y-3 max-h-80 overflow-y-auto pr-1">
+            <!-- Renderizado por app.js -->
+          </div>
+
+          <!-- Resumen de Totales -->
+          <div id="cart-summary-box" class="hidden p-4 rounded-2xl bg-stone-50 border border-stone-200 space-y-2">
+            <div id="cart-summary-breakdown" class="text-xs sm:text-sm text-stone-700 leading-snug">
+              <!-- Resumen -->
+            </div>
+            <div class="text-[11px] text-stone-500 italic">
+              * El valor total y confirmación de stock se coordinan directamente por WhatsApp con Lucas.
+            </div>
+          </div>
+
+          <!-- Botones de Acción -->
+          <div class="space-y-3 pt-2">
+            <!-- Botón Principal: WhatsApp -->
+            <button type="button" id="btn-send-whatsapp" class="pulse-whatsapp w-full flex items-center justify-center gap-3 px-6 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-black text-sm sm:text-base uppercase tracking-wider shadow-lg hover:shadow-xl transition transform active:scale-95">
+              <i class="fa-brands fa-whatsapp text-2xl"></i>
+              <span>Enviar Pedido a Lucas</span>
+            </button>
+
+            <!-- Botón Secundario: Copiar Datos -->
+            <button type="button" id="btn-copy-order" class="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-stone-100 hover:bg-stone-200 text-stone-800 font-bold text-xs sm:text-sm uppercase tracking-wider transition border border-stone-200">
+              <i class="fa-regular fa-copy"></i>
+              <span>Copiar Detalle del Pedido</span>
+            </button>
+
+            <p class="text-center text-[11px] text-stone-400">
+              Al hacer clic en enviar, se abrirá WhatsApp con el mensaje preformateado y te conectará con <strong>Lucas (+54 3549-443269)</strong>.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= ZONAS DE ENTREGA Y CONTACTO ================= -->
+  <section id="zonas" class="py-16 sm:py-24 bg-white border-b border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="inline-block px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold uppercase tracking-wider">
+          <i class="fa-solid fa-map-location-dot"></i> Cobertura
+        </span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-black text-stone-900">
+          Zonas de Entrega & Contacto
+        </h2>
+        <p class="text-stone-600 text-base">
+          Llevamos el sabor casero a dos localidades de las sierras cordobesas:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
+        
+        <!-- Tarjeta Villa de Soto -->
+        <div class="card-artisan p-6 sm:p-8 border-2 border-amber-200 bg-amber-50/40">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 rounded-xl bg-amber-600 text-white flex items-center justify-center text-xl">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div>
+              <h3 class="font-serif text-2xl font-bold text-stone-900">Villa de Soto</h3>
+              <span class="text-xs font-bold text-amber-800 uppercase tracking-wider">Entregas y Puntos de Retiro</span>
+            </div>
+          </div>
+          <p class="text-stone-600 text-sm leading-relaxed mb-4">
+            Hacé tu pedido con anticipación durante la semana para asegurar tus cajas favoritas de sorrentinos y salsas. Coordinamos entregas a domicilio y puntos de entrega locales.
+          </p>
+          <div class="pt-3 border-t border-amber-200/60 flex items-center justify-between text-xs text-stone-700 font-semibold">
+            <span><i class="fa-solid fa-clock text-amber-600 mr-1"></i> Pedidos con anticipación</span>
+            <span class="text-emerald-700 font-bold">Disponible</span>
+          </div>
+        </div>
+
+        <!-- Tarjeta La Falda -->
+        <div class="card-artisan p-6 sm:p-8 border-2 border-red-200 bg-red-50/40">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 rounded-xl bg-yaya-red text-white flex items-center justify-center text-xl">
+              <i class="fa-solid fa-mountain-sun"></i>
+            </div>
+            <div>
+              <h3 class="font-serif text-2xl font-bold text-stone-900">La Falda</h3>
+              <span class="text-xs font-bold text-yaya-red uppercase tracking-wider">Valle de Punilla</span>
+            </div>
+          </div>
+          <p class="text-stone-600 text-sm leading-relaxed mb-4">
+            Repartos programados en La Falda y zonas cercanas. Podés encargar tu pedido de pastas congeladas listas para tener en el freezer y disfrutar cuando quieras.
+          </p>
+          <div class="pt-3 border-t border-red-200/60 flex items-center justify-between text-xs text-stone-700 font-semibold">
+            <span><i class="fa-solid fa-clock text-yaya-red mr-1"></i> Entregas programadas</span>
+            <span class="text-emerald-700 font-bold">Disponible</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Banner Teléfono y WhatsApp con estética retro -->
+      <div class="max-w-4xl mx-auto rounded-3xl overflow-hidden border border-stone-200 shadow-xl bg-stone-900 text-white grid grid-cols-1 md:grid-cols-12 items-center">
+        <div class="md:col-span-5 h-64 md:h-full overflow-hidden">
+          <img src="assets/telefono-pedidos.jpg" alt="Pedidos WhatsApp Lucas" class="w-full h-full object-cover">
+        </div>
+        <div class="md:col-span-7 p-6 sm:p-10 space-y-4">
+          <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider border border-emerald-500/30">
+            Línea Directa de Pedidos
+          </span>
+          <h3 class="font-serif text-3xl font-bold text-white">
+            Pedidos: +54 3549-443269
+          </h3>
+          <p class="text-stone-300 text-sm leading-relaxed">
+            Coordiná tu pedido directamente con <strong>Lucas</strong>. Si tenés dudas sobre stock, variedades vegetarianas, carnes o consejos de cocción, escribinos sin compromiso.
+          </p>
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="https://wa.me/5493549443269" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm uppercase tracking-wider transition shadow-md">
+              <i class="fa-brands fa-whatsapp text-lg"></i> Chatear con Lucas
+            </a>
+            <a href="https://instagram.com/pastascaseraslayaya" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-stone-800 hover:bg-stone-700 text-stone-200 font-bold text-sm uppercase tracking-wider transition border border-stone-700">
+              <i class="fa-brands fa-instagram text-lg text-rose-400"></i> Seguir en Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-stone-950 text-stone-400 pt-16 pb-12 border-t border-stone-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-stone-800">
+        
+        <!-- Info Marca -->
+        <div class="md:col-span-5 space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="assets/logo.jpg" alt="Logo La Yaya" class="w-12 h-12 rounded-full border border-amber-500">
+            <div>
+              <span class="block font-serif text-xl font-bold text-white leading-none">Pastas Caseras La Yaya</span>
+              <span class="block text-xs text-amber-500 uppercase tracking-widest mt-0.5">Emprendimiento de Lucas & Daniela</span>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm text-stone-400 leading-relaxed max-w-sm">
+            Recetas familiares amasadas con ingredientes simples y mucho amor por la cocina. Llevamos el verdadero sabor casero a Villa de Soto y La Falda.
+          </p>
+        </div>
+
+        <!-- Enlaces Rápidos -->
+        <div class="md:col-span-3 space-y-3">
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider">Navegación</h4>
+          <ul class="space-y-2 text-xs sm:text-sm">
+            <li><a href="#variedades" class="hover:text-amber-400 transition">Sorrentinos Gourmet</a></li>
+            <li><a href="#salsas-info" class="hover:text-amber-400 transition">Salsas Caseras</a></li>
+            <li><a href="#como-cocinar" class="hover:text-amber-400 transition">Instructivo de Cocción</a></li>
+            <li><a href="#historia" class="hover:text-amber-400 transition">Sobre Lucas y Dani</a></li>
+            <li><a href="#pedido-seccion" class="hover:text-amber-400 transition">Armar Pedido</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacto -->
+        <div class="md:col-span-4 space-y-3">
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider">Contacto & Pedidos</h4>
+          <ul class="space-y-2.5 text-xs sm:text-sm">
+            <li class="flex items-center gap-2 text-stone-300">
+              <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i>
+              <span>WhatsApp: <strong>+54 9 3549 443269</strong> (Lucas)</span>
+            </li>
+            <li class="flex items-center gap-2 text-stone-300">
+              <i class="fa-brands fa-instagram text-rose-400 text-base"></i>
+              <span>Instagram: <strong>@pastascaseraslayaya</strong></span>
+            </li>
+            <li class="flex items-center gap-2 text-stone-300">
+              <i class="fa-solid fa-map-pin text-amber-400 text-base"></i>
+              <span>Villa de Soto & La Falda, Córdoba</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500">
+        <p>© 2026 Pastas Caseras La Yaya. Hecho con amor para Lucas y Daniela.</p>
+        <p class="flex items-center gap-1">
+          <span>De nuestra cocina a tu mesa</span> 🍝
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= FLOATING WHATSAPP BUTTON ================= -->
+  <a href="https://wa.me/5493549443269" target="_blank" rel="noopener" class="pulse-whatsapp fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-emerald-500 text-white flex items-center justify-center text-2xl shadow-2xl hover:bg-emerald-600 transition transform hover:scale-110" title="Chatear con Lucas">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- ================= MOBILE STICKY CART BAR ================= -->
+  <div id="mobile-cart-bar" class="fixed bottom-0 left-0 right-0 z-30 p-3 bg-white/95 backdrop-blur-md border-t border-stone-200 shadow-2xl flex items-center justify-between sm:hidden transition-transform duration-300 translate-y-full">
+    <div class="flex items-center gap-2">
+      <span class="w-8 h-8 rounded-full bg-yaya-red text-white flex items-center justify-center font-bold text-xs" id="mobile-cart-count">0</span>
+      <span class="text-xs font-bold text-stone-800">Productos seleccionados</span>
+    </div>
+    <a href="#pedido-seccion" class="px-4 py-2 bg-yaya-red hover:bg-yaya-redDark text-white text-xs font-bold uppercase tracking-wider rounded-xl transition shadow">
+      Ver Pedido
+    </a>
+  </div>
+
+  <!-- ================= TOAST NOTIFICATION CONTAINER ================= -->
+  <div id="toast-notification" class="bg-stone-900 text-white px-5 py-3.5 rounded-2xl shadow-2xl border border-stone-700 flex items-center gap-3 text-sm max-w-md">
+    <i id="toast-icon" class="fa-solid fa-circle-check text-green-400 text-lg"></i>
+    <span id="toast-message" class="font-medium text-stone-200">Mensaje de notificación</span>
+  </div>
+
+  <!-- App Logic -->
+  <script src="app.js"></script>
+</body>
+</html>

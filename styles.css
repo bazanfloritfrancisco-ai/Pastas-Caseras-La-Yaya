@@ -1,0 +1,184 @@
+/* ==========================================================
+   PASTAS CASERAS LA YAYA - ESTILOS PERSONALIZADOS
+   Emprendimiento de Lucas & Daniela
+   ========================================================== */
+
+:root {
+  --color-cream-50: #fdfcf9;
+  --color-cream-100: #faf6ee;
+  --color-cream-200: #f4ecdc;
+  --color-cream-300: #eae0c8;
+  
+  --color-terracotta-500: #c2410c;
+  --color-terracotta-600: #9a1b1e;
+  --color-terracotta-700: #881315;
+
+  --color-olive-600: #3f6212;
+  --color-olive-700: #2c450c;
+  
+  --color-gold-500: #d97706;
+  --color-gold-600: #b45309;
+
+  --color-charcoal-800: #262626;
+  --color-charcoal-900: #171717;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream-50);
+  color: #27272a;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .font-serif-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.bg-grain {
+  background-color: #faf6ee;
+  background-image: radial-gradient(rgba(180, 83, 9, 0.05) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.bg-warm-hero {
+  background: radial-gradient(circle at top right, rgba(254, 243, 199, 0.6), transparent 50%),
+              radial-gradient(circle at bottom left, rgba(254, 226, 226, 0.5), transparent 50%),
+              #faf6ee;
+}
+
+.card-artisan {
+  background-color: #ffffff;
+  border: 1px solid rgba(234, 224, 200, 0.8);
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 20px -2px rgba(136, 19, 21, 0.04), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-artisan:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px -4px rgba(136, 19, 21, 0.08), 0 6px 12px -2px rgba(0, 0, 0, 0.04);
+  border-color: rgba(217, 119, 6, 0.35);
+}
+
+.stamp-border {
+  border: 2px dashed rgba(180, 83, 9, 0.3);
+  border-radius: 1rem;
+}
+
+.badge-flavor {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(1deg);
+  }
+}
+
+.animate-float {
+  animation: floatGentle 4s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+  }
+}
+
+.pulse-whatsapp {
+  animation: pulseGlow 2.5s infinite;
+}
+
+.reveal-init {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#toast-notification {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 100;
+  transform: translateY(120%);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+}
+
+#toast-notification.show {
+  transform: translateY(0);
+}
+
+.tab-btn.active {
+  background-color: #9a1b1e;
+  color: #ffffff;
+  border-color: #9a1b1e;
+  box-shadow: 0 4px 12px rgba(154, 27, 30, 0.25);
+}
+
+.location-btn.selected {
+  border-color: #9a1b1e;
+  background-color: #fff1f2;
+  color: #9a1b1e;
+  box-shadow: 0 0 0 2px #9a1b1e;
+}
+
+.qty-btn {
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: #f4ecdc;
+  color: #78350f;
+  font-weight: 700;
+  transition: background-color 0.2s, transform 0.1s;
+  user-select: none;
+}
+
+.qty-btn:hover {
+  background-color: #eae0c8;
+}
+
+.qty-btn:active {
+  transform: scale(0.92);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #faf6ee;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4c5ab;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b8a68b;
+}
